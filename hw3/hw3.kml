@@ -1,0 +1,192 @@
+<kml xmlns="http://www.opengis.net/kml/2.0">
+    <Document>
+        <Style id="z1">
+            <IconStyle>
+                <Icon>
+                <href> http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png </href>
+                </Icon>
+            </IconStyle>
+        </Style>
+        <Folder>
+            <name> Viterbi School </name>
+            <Placemark>
+                <name>CS</name> 
+                <styleUrl>#z1</styleUrl>
+                <description>Department of Comupter Science in USC Viterbi School of Engineering</description>
+                <Point>
+                <coordinates>-118.28921339975,34.01944301681967</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>BE</name> 
+                <styleUrl>#z1</styleUrl>
+                <description>Department of Biomedical Engineering in USC Viterbi School of Engineering</description>
+                <Point>
+                <coordinates>-118.28990130059734,34.02032470925064</coordinates>
+                </Point>
+            </Placemark>
+        </Folder>
+        <Folder>
+            <name> Rossier School </name>
+            <Placemark>
+                <name>EDUE</name>
+                <styleUrl>#z1</styleUrl>
+                <description>The Rossier School of Education's Doctor of Education in Organizational Change and Leadership (OCL) program is housed in Mudd Hall.</description>
+                <Point>
+                <coordinates>-118.28648992045635,34.01860763980641</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>EDUC</name>
+                <styleUrl>#z1</styleUrl>
+                <description>the main building for the Rossier School of Education</description>
+                <Point>
+                <coordinates>-118.28405543699478,34.02202048334887</coordinates>
+                </Point>
+            </Placemark>
+        </Folder>
+        <Folder>
+            <name> Annenberg School </name>
+            <Placemark>
+                <name>COMM</name> 
+                <styleUrl>#z1</styleUrl>
+                <description>USC Annenberg School for Communication</description>
+                <Point>
+                <coordinates>-118.28663847397765,34.02213612240766</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>JOUR</name> 
+                <styleUrl>#z1</styleUrl>
+                <description>the main building for the Annenberg School for Journalism</description>
+                <Point>
+                <coordinates>-118.28721962650663,34.02097098546533</coordinates>
+                </Point>
+            </Placemark>
+        </Folder>
+        <Folder>
+            <name> School of Social Work </name>
+            <Placemark>
+                <name>SWKC1</name>
+                <styleUrl>#z1</styleUrl>
+                <description>Social Work Center</description>
+                <Point>
+                <coordinates>-118.28227290847072,34.02228708229806</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark>
+                <name>SWKC2</name>
+                <styleUrl>#z1</styleUrl>
+                <description>home to the USC School of Social Work</description>
+                <Point>
+                <coordinates>-118.28278657489861,34.02210761530251</coordinates>
+                </Point>
+            </Placemark>
+        </Folder>
+        <Folder>
+            <name> Marshall School </name>   
+            <Placemark>
+                <name>MBA</name>
+                <styleUrl>#z1</styleUrl>
+                <description>some graduate programs of the USC Marshall School of Business</description>
+                <Point>
+                <coordinates>-118.2828744990126,34.019289847056626</coordinates>
+                </Point>
+            </Placemark>   
+            <Placemark>
+                <name>MOR</name> 
+                <styleUrl>#z1</styleUrl>
+                <description> department of Management And Organization of the USC Marshall School of Business</description>
+                <Point>
+                <coordinates>-118.2853250023115,34.0186049110855</coordinates>
+                </Point>
+            </Placemark>
+        </Folder>
+        <Folder>
+            <name> Roski School </name>   
+            <Placemark>
+                <name>ART</name>
+                <styleUrl>#z1</styleUrl>
+                <description>Department of Fine Arts in USC Roski School of Art and Design in Watt Hall</description>
+                <Point>
+                <coordinates>-118.28820564326102,34.01946899006574</coordinates>
+                </Point>
+            </Placemark>   
+            <Placemark>
+                <name>DES</name> 
+                <styleUrl>#z1</styleUrl>
+                <description>the Museum of the USC Roski School of Art and Design</description>
+                <Point>
+                <coordinates>-118.28713530912006,34.0191114793395396</coordinates>
+                </Point>
+            </Placemark>
+        </Folder> 
+        <Folder>
+            <name>home</name>   
+            <Placemark>
+                <name>HOME</name>
+                <styleUrl>#z1</styleUrl>
+                <description>N/A</description>
+                <Point>
+                <coordinates>-118.29319464953164,34.02937165442759</coordinates>
+                </Point>
+            </Placemark> 
+        </Folder>
+        <Placemark>
+            <name>ConvexHull</name>
+            <Polygon>
+            <Style><LineStyle><color>ffff0000</color><extrude>1</extrude></LineStyle><PolyStyle><color>7f0000ff</color></PolyStyle></Style>
+            <description> Convex Hull</description>
+            <outerBoundaryIs>
+            <LinearRing>
+                <coordinates>-118.2853250023115,34.0186049110855 
+                             -118.28648992045635,34.01860763980641 
+                             -118.28921339975,34.01944301681967 
+                             -118.28990130059734,34.02032470925064 
+                             -118.29319464953164,34.02937165442759 
+                             -118.28227290847072,34.02228708229806 
+                             -118.2828744990126,34.019289847056626
+                             -118.2853250023115,34.0186049110855
+                </coordinates>
+            </LinearRing>
+            </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+        <Placemark>
+            <name>Neighbor1</name>
+            <Style><LineStyle><color>#ff0000ff</color><width>2</width><extrude>1</extrude><tessellate>1</tessellate></LineStyle></Style>
+            <description>Nearest Neighbor 1</description>
+            <altitudeMode>absolute</altitudeMode>
+            <LineString>
+            <coordinates>-118.29319464953164,34.02937165442759 -118.28990130059734,34.02032470925064</coordinates>
+            </LineString>
+        </Placemark>   
+        <Placemark>
+            <name>Neighbor2</name>
+            <Style><LineStyle><color>#ff0000ff</color><width>2</width><extrude>1</extrude><tessellate>1</tessellate></LineStyle></Style>
+            <description>Nearest Neighbor 2</description>
+            <altitudeMode>absolute</altitudeMode>
+            <LineString>
+            <coordinates>-118.29319464953164,34.02937165442759 -118.28663847397765,34.02213612240766</coordinates>
+            </LineString>
+        </Placemark>    
+        <Placemark>
+            <name>Neighbor3</name>
+            <Style><LineStyle><color>#ff0000ff</color><width>2</width><extrude>1</extrude><tessellate>1</tessellate></LineStyle></Style>
+            <description>Nearest Neighbor 3</description>
+            <altitudeMode>absolute</altitudeMode>
+            <LineString>
+            <coordinates>-118.29319464953164,34.02937165442759 -118.28721962650663,34.02097098546533</coordinates>
+            </LineString>
+        </Placemark>    
+        <Placemark>
+            <name>Neighbor4</name>
+            <Style><LineStyle><color>#ff0000ff</color><width>2</width><extrude>1</extrude><tessellate>1</tessellate></LineStyle></Style>
+            <description>Nearest Neighbor 4</description>
+            <altitudeMode>absolute</altitudeMode>
+            <LineString>
+            <coordinates>-118.29319464953164,34.02937165442759 -118.28921339975,34.01944301681967</coordinates>
+            </LineString>
+        </Placemark>       
+    </Document>
+</kml>

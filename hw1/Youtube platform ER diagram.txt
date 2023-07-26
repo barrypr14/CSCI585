@@ -1,0 +1,72 @@
+Entities and Attributes
+USER
+Models the basic user entity with some attributes. Any member in USER must be one or both of its subtype.
+	•	unique id: required, and it is a primary key.
+	•	email: required, and it is also unique.
+	•	name: required, it can be duplicated because some people have same name make sense.
+	•	age, address: optional. 
+	•	User_type: it is the subtype discriminator. 
+VIDEO CREATOR
+It is a subtype of User entity, and it is used to store the video creator special attributes.
+	•	it inherited all the attributes from USER.
+	•	number of channel: required -> it is because only open a channel that can be a video 		creator, and should be not NULL or 0.
+VIDEO CONSUMER
+It is also a subtype of User entity, and it is used to store the video consumer special attributes.
+	•	it inherits all the attributes from USER.
+	•	number of subscription: required -> to record the total subscription the consumer 		subscribes.
+SUBSCRIPTION
+It is used to record what type of subscription the video consumer subscribe to the channel
+	•	Unique id, Channel id: it is the composite primary key as well as the foreign key 		links to the VIDEO CONSUMER and CHANNEL respectively.
+	•	subscription type: required, and is used to record the subscription type consumers 		use. Paid or free.
+CHANNEL
+Models the basic channel entity
+	•	Channel id: unique and required, and it is a primary key. 
+	•	Owner: it is foreign key, and it is reference from VIDEO CONSUMER entity.
+	•	name, subscription, create time: required.
+VIDEO
+It is used to store the video metadata when uploads to the channel
+	•	video id: primary key
+	•	uploader id, URL: both are required and unique. Uploader id is foreign key which is 		reference CHANNEL entity
+	•	title, thumbnails, duration, upload time, upload date: all are required
+	•	description: optional -> not really need video description in Youtube
+	•	Video_type: it is the subtype discriminator of information or entertainment
+Informational Videos / Entertainment Videos
+Both are subtypes of Videos, and every video will be exactly one of them.
+	•	For information video, it has a video id for primary and foreign key, and one special  		attribute keywords
+	•	For entertainment video, it has a video id for primary and foreign key, and one 		special attribute tags
+STATISTICS DATA
+It has a dependency on videos, and stores some statistics data derived from each video -> Weak entity
+	•	video_id: primary key and foreign key.
+	•	likes, dislikes, view count, number of shares and number of comments: all are 			required, because none of videos don’t have these data. It can be zero.
+COMMENT DATA
+It also has a dependency on VIDEO and USER, and store the users comments to the video -> Weak entity
+	•	video id, unique id, comment time: these three are composite primary key, and video 		id / unique id are also foreign key links to Video entity and User entity. It is 		because one user can comment a video many times, it makes created date attribute 		should be considered to be part of primary key.
+	•	comment text: required
+	•	likes, sentiment: optional
+SPONSOR
+It records sponsors who sponsor videos
+	•	sponsor id: primary key
+	•	name, amount sponsored: required, because it make sense sponsor must sponsor some 		money so that they will present in this table.
+	•	phone, address: optional
+SPONSOR VIDEO
+Because one video can have many sponsors and one sponsor can sponsor many videos, using sponsor video entity to record which video that the sponsor sponsored.
+	•	sponsor_id and video_id: both are primary key and foreign keys link to sponsor entity 		and video entity
+	•	amount sponsored: required
+
+Relationship
+1:1
+	•	A single VIDEO CREATOR may be of type USER.
+	•	A single VIDEO CONSUMER may be of type USER.
+	•	A single CHANNEL may be created by one VIDEO CREATOR.
+	•	An INFORMATIONAL VIDEO may be of type VIDEO.
+	•	An ENTERTAINMENT VIDEO may be of type VIDEO.
+	•	An STATISTICS DATA is derived from a VIDEO.
+1:M
+	•	A CHANNEL can have 0 or more VIDEOS.
+	•	A USER can make 0 or more COMMENTS.
+	•	A VIDEO can contain 0 or more COMMENTS.
+M:N
+All M:N relationships are decomposed into two 1:M relationships by resolving them into an intermediate entity, these include
+	•	one CHANNEL can be subscribed by multiple VIDEO CONSUMERS, and a VIDEO CONSUMERS can subscribe multiple CHANNEL.
+	•	one SPONSOR can sponsor multiple VIDEOS, and a VIDEO can be sponsored by multiple 		SPONSOR.
+
